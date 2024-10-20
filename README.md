@@ -23,16 +23,10 @@ This is a Python project that provides a foundational structure for application 
    ```bash
    sudo nano PPG.sh
    
-3. **Give execution permissions**: Run the generator to create an installation file:
-   ```bash
-   su
-   chmod +x PPG.sh
-   exit
-   
-4. **Execute the PPG.sh file**: Run the generator to create an installation file:
+3. **Execute the PPG.sh file**: Run the generator to create an installation file:
    ```bash
    ./PPG.sh
    
-5. **Execute the setup.sh file**: After executing it, you should see some installation processes:
+4. **Execute the setup.sh file**: After executing it, you should see some installation processes:
    ```bash
    ./setup.sh
