@@ -1,5 +1,9 @@
 # Python Project Generator (PPG)
 
+![PPGscreen1](https://github.com/user-attachments/assets/c80f75ba-f438-4675-b90f-88ba25be3a5c)
+![PPGscreenshot2](https://github.com/user-attachments/assets/a42cf887-191a-4264-83e9-2ba59d260e2f)
+![PPGscreenshot3](https://github.com/user-attachments/assets/01bd24dd-1228-4622-a418-a66f38fba45f)
+
 **Description:**
 
 This is a Python project that provides a foundational structure for application development. It automates the setup of a virtual environment, installation of dependencies, and configuration of essential directories and files for development. This setup is ideal for developers looking to kickstart their projects quickly and efficiently.
