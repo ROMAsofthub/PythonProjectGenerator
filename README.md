@@ -18,8 +18,8 @@ This is a Bash project that provides a foundational structure for Python applica
 
 1. **Clone the Repository**: Clone this repository to your local machine using:
    ```bash
-   git clone https://github.com/ROMAsofthub/Python-Project-Generator.git
-   cd Python-Project-Generator
+   git clone https://github.com/ROMAsofthub/PythonProjectGenerator.git
+   cd PythonProjectGenerator
 
 2. **Edit the `PPG.sh` file**: Edit the file config with your preferred text editor:
    ```bash
