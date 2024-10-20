@@ -39,4 +39,4 @@ This is a Python project that provides a foundational structure for application 
    
 6. **Execute the `setup.sh` file**: After executing it, you should see some installation processes:
    ```bash
-   ./setup.sh
+   ./(my_project).setup.sh
