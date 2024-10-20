@@ -27,6 +27,7 @@ This is a Python project that provides a foundational structure for application 
    ```bash
    su
    chmod +x PPG.sh
+   exit
    
 4. **Execute the PPG.sh file**: Run the generator to create an installation file:
    ```bash
