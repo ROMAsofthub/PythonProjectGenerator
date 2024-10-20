@@ -22,13 +22,14 @@ SETUP_FILE="${PROJECT_DIR}.setup.sh"
 echo "#!/bin/bash" > $SETUP_FILE
 echo "clear" >> $SETUP_FILE
 echo "" >> $SETUP_FILE
+echo "SETUP_FILE=\"$SETUP_FILE\"" >> $SETUP_FILE
 
 # Definición de colores
 echo "RED=\"\e[0;31m\"" >> $SETUP_FILE
 echo "GREEN=\"\e[0;32m\"" >> $SETUP_FILE
 echo "YELLOW=\"\e[0;33m\"" >> $SETUP_FILE
 echo "WHITE=\"\e[0;37m\"" >> $SETUP_FILE
-
+echo "RESET=\"\e[0;0m\"" >> $SETUP_FILE
 # Function to handle errors
 echo "error_exit() {" >> $SETUP_FILE
 echo "    echo -e \"\${RED}✘✘ Error: \$1\"; exit 1;" >> $SETUP_FILE
@@ -77,10 +78,14 @@ for FILE in "${FILES[@]}"; do
 done
 
 # Inform the user
-echo "echo -e \"\${GREEN}✓ Setup complete. Virtual environment created and files/folders initialized in \$PROJECT_DIR.\"" >> $SETUP_FILE
-
+echo "echo -e \"\${GREEN}✓ Setup complete. Virtual environment, Modules, folders and files initialized in \$PROJECT_DIR.\${RESET}\"" >> $SETUP_FILE
+echo "rm \$SETUP_FILE" >> $SETUP_FILE
 # Make the setup script executable
 chmod +x $SETUP_FILE
 
 # Final message
 echo "$SETUP_FILE has been generated. Run it to install everything"
+
+# Python Project Generator
+# Ver: 1.0
+# Rights reserved [ROMA]software
