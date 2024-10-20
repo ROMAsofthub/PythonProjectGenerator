@@ -8,16 +8,17 @@ PROJECT_DIR="my_project"
 VENV_DIR="venv"
 
 # List of required Python modules
-MODULES=("requests" "flask" "numpy")
+MODULES=("requests" "numpy")
 
 # List of folders to be created inside the project folder
-FOLDERS=("images" "src" "data" "logs")
+FOLDERS=("src" "data" "logs")
 
 # List of files to be created inside the project folder
 FILES=("README.md" "requirements.txt" "src/main.py")
 
 # --- Generating the Setup Script ---
-SETUP_FILE="setup.sh"
+PROJECT_DIR="$(echo $PROJECT_DIR | tr ' ' '_')"
+SETUP_FILE="${PROJECT_DIR}.setup.sh"
 echo "#!/bin/bash" > $SETUP_FILE
 echo "clear" >> $SETUP_FILE
 echo "" >> $SETUP_FILE
@@ -40,7 +41,6 @@ echo "}" >> $SETUP_FILE
 
 # Check if project directory already exists / Check for spaces in the project directory name and replace them with underscores
 echo "PROJECT_DIR=\"$PROJECT_DIR\"" >> $SETUP_FILE
-echo "PROJECT_DIR=\"\$(echo \$PROJECT_DIR | tr ' ' '_')\"" >> $SETUP_FILE
 echo "if [ -d \"\$PROJECT_DIR\" ]; then" >> $SETUP_FILE
 echo "    error_exit \"Project directory already exists: \$PROJECT_DIR\"" >> $SETUP_FILE
 echo "fi" >> $SETUP_FILE
