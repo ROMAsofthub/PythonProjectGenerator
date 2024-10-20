@@ -5,7 +5,7 @@
 
 **Description:**
 
-This is a Python project that provides a foundational structure for application development. It automates the setup of a virtual environment, installation of dependencies, and configuration of essential directories and files for development. This setup is ideal for developers looking to kickstart their projects quickly and efficiently.
+This is a Bash project that provides a foundational structure for Python application development. It automates the setup of a virtual environment, installation of dependencies, and configuration of essential directories and files for development. This setup is ideal for developers looking to kickstart their projects quickly and efficiently.
 
 ## Features
 - **Project Structure**: Automatically creates a main project folder with essential subdirectories such as `src`, `data`, `logs`, and more.
