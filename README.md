@@ -25,18 +25,14 @@ This is a Python project that provides a foundational structure for application 
    ```bash
    sudo nano PPG.sh
 
-3. **Switch to Super User**: Enter as a super user to ensure you have the necessary permissions:
-   ```bash
-   su
-
-4. **Set Permissions**: Grant execute permissions to the `PPG.sh` file:
+3. **Set Permissions**: Grant execute permissions to the `PPG.sh` file:
    ```bash
    chmod +x PPG.sh
    
-5. **Execute the `PPG.sh` file**: Run the generator to create a setup file:
+4. **Execute the `PPG.sh` file**: Run the generator to create a setup file:
    ```bash
    ./PPG.sh
    
-6. **Execute the `setup.sh` file**: After executing it, you should see some installation processes:
+5. **Execute the `setup.sh` file**: After executing it, you should see some installation processes:
    ```bash
    ./(my_project).setup.sh
