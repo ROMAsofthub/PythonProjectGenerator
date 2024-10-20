@@ -27,7 +27,6 @@ echo "RED=\"\e[0;31m\"" >> $SETUP_FILE
 echo "GREEN=\"\e[0;32m\"" >> $SETUP_FILE
 echo "YELLOW=\"\e[0;33m\"" >> $SETUP_FILE
 echo "WHITE=\"\e[0;37m\"" >> $SETUP_FILE
-echo "RESET=\"\e[0m\"" >> $SETUP_FILE
 
 # Function to handle errors
 echo "error_exit() {" >> $SETUP_FILE
@@ -60,9 +59,6 @@ echo "source \$PROJECT_DIR/$VENV_DIR/bin/activate || error_exit \"Failed to acti
 
 # Install modules
 for MODULE in "${MODULES[@]}"; do
-  echo "if pip show \"$MODULE\" &> /dev/null; then" >> $SETUP_FILE
-  echo "    echo -e \"\${GREEN}✓ The module '$MODULE' is already installed. ✅\"" >> $SETUP_FILE
-  echo "else" >> $SETUP_FILE
   echo "    echo -e \"\${YELLOW}↻ Installing the module '$MODULE'...\${WHITE}\"" >> $SETUP_FILE
   echo "    pip install \"$MODULE\" || error_exit \"Failed to install module: $MODULE\" && success_msg \"Module installed: $MODULE\"" >> $SETUP_FILE
   echo "fi" >> $SETUP_FILE
@@ -70,13 +66,13 @@ done
 
 # Create folders inside the project directory
 for FOLDER in "${FOLDERS[@]}"; do
-  echo "echo -e \"\${YELLOW}↻ Creating folder: $FOLDER...\"" >> $SETUP_FILE
+  echo "echo -e \"\${YELLOW}↻ Creating folder: $FOLDER...\${RED}\"" >> $SETUP_FILE
   echo "mkdir -p \$PROJECT_DIR/$FOLDER || error_exit \"Failed to create folder: $FOLDER\" && success_msg \"Folder created: $FOLDER\"" >> $SETUP_FILE
 done
 
 # Create files inside the project directory
 for FILE in "${FILES[@]}"; do
-  echo "echo -e \"\${YELLOW}↻ Creating file: $FILE...\"" >> $SETUP_FILE
+  echo "echo -e \"\${YELLOW}↻ Creating file: $FILE...\${RED}\"" >> $SETUP_FILE
   echo "touch \$PROJECT_DIR/$FILE || error_exit \"Failed to create file: $FILE\" && success_msg \"File created: $FILE\"" >> $SETUP_FILE
 done
 
