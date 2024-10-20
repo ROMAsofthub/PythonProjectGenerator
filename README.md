@@ -1,2 +1,20 @@
-# Python-Project-Generator-PPG-
-Este es un proyecto de Python que proporciona una estructura básica para el desarrollo de aplicaciones. Incluye la creación automática de un entorno virtual, la instalación de dependencias y la configuración de directorios y archivos esenciales para el desarrollo.
+# Python Project Generator (PPG)
+
+**Description:**
+
+This is a Python project that provides a foundational structure for application development. It automates the setup of a virtual environment, installation of dependencies, and configuration of essential directories and files for development. This setup is ideal for developers looking to kickstart their projects quickly and efficiently.
+
+## Features
+
+- **Project Structure**: Automatically creates a main project folder with essential subdirectories such as `src`, `data`, `logs`, and `images`.
+- **Virtual Environment**: Configures a virtual environment using `venv` to manage project dependencies effectively.
+- **Dependency Management**: Installs essential Python modules like `requests`, `flask`, and `numpy` for web development and data handling.
+- **Initial Files**: Generates base files like `README.md`, `requirements.txt`, and starter scripts to facilitate project documentation and dependency management.
+- **Error Handling**: Includes robust error handling in the setup script to ensure a smooth initialization process.
+
+## Installation
+
+1. **Clone the Repository**: Clone this repository to your local machine using:
+   ```bash
+   git clone https://github.com/your_username/my_project.git
+   cd my_project
