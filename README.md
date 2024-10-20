@@ -1,8 +1,7 @@
 # Python Project Generator (PPG)
 
-![PPGscreen1](https://github.com/user-attachments/assets/c80f75ba-f438-4675-b90f-88ba25be3a5c)
-![PPGscreenshot2](https://github.com/user-attachments/assets/a42cf887-191a-4264-83e9-2ba59d260e2f)
-![PPGscreenshot3](https://github.com/user-attachments/assets/01bd24dd-1228-4622-a418-a66f38fba45f)
+![Diseño sin título(1)](https://github.com/user-attachments/assets/4c2d7504-2194-480a-8211-da5998ff417c)
+
 
 **Description:**
 
