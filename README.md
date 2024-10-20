@@ -16,5 +16,5 @@ This is a Python project that provides a foundational structure for application 
 
 1. **Clone the Repository**: Clone this repository to your local machine using:
    ```bash
-   git clone https://github.com/your_username/my_project.git
-   cd my_project
+   git clone https://github.com/ROMAsofthub/Python-Project-Generator.git
+   cd Python-Project-Gnerator
