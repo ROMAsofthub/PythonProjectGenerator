@@ -33,7 +33,7 @@ This is a Python project that provides a foundational structure for application 
    ```bash
    chmod +x PPG.sh
    
-5. **Execute the `PPG.sh` file**: Run the generator to create an installation file:
+5. **Execute the `PPG.sh` file**: Run the generator to create a setup file:
    ```bash
    ./PPG.sh
    
