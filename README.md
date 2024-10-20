@@ -19,7 +19,7 @@ This is a Python project that provides a foundational structure for application 
 1. **Clone the Repository**: Clone this repository to your local machine using:
    ```bash
    git clone https://github.com/ROMAsofthub/Python-Project-Generator.git
-   cd Python-Project-Gnerator
+   cd Python-Project-Generator
 
 2. **Edit the `PPG.sh` file**: Edit the file config with your preferred text editor:
    ```bash
