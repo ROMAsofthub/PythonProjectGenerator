@@ -18,3 +18,12 @@ This is a Python project that provides a foundational structure for application 
    ```bash
    git clone https://github.com/ROMAsofthub/Python-Project-Generator.git
    cd Python-Project-Gnerator
+
+2. **Edit the PPG.sh file**: Edit the file with your text editor of preference:
+   ```bash
+   sudo nano PPG.sh
+   
+3. **Clone the Repository**: Clone this repository to your local machine using:
+   ```bash
+   git clone https://github.com/ROMAsofthub/Python-Project-Generator.git
+   cd Python-Project-Gnerator
