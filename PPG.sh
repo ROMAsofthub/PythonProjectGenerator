@@ -39,15 +39,16 @@ echo "    echo -e \"\${GREEN}✓ \$1\";" >> $SETUP_FILE
 echo "}" >> $SETUP_FILE
 
 # Check if project directory already exists / Check for spaces in the project directory name and replace them with underscores
+echo "PROJECT_DIR=\"$PROJECT_DIR\"" >> $SETUP_FILE
 echo "PROJECT_DIR=\"\$(echo \$PROJECT_DIR | tr ' ' '_')\"" >> $SETUP_FILE
-echo "if [ -d \"$PROJECT_DIR\" ]; then" >> $SETUP_FILE
-echo "    error_exit \"Project directory already exists: $PROJECT_DIR\"" >> $SETUP_FILE
+echo "if [ -d \"\$PROJECT_DIR\" ]; then" >> $SETUP_FILE
+echo "    error_exit \"Project directory already exists: \$PROJECT_DIR\"" >> $SETUP_FILE
 echo "fi" >> $SETUP_FILE
 
 # Create the main project directory
-echo "echo -e \"\${YELLOW}↻ Creating project directory: $PROJECT_DIR...\"" >> $SETUP_FILE
-echo "mkdir -p $PROJECT_DIR || error_exit \"Failed to create project directory: $PROJECT_DIR\" && success_msg \"Project directory created: $PROJECT_DIR\"" >> $SETUP_FILE
-echo "PROJECT_DIR=\"$PROJECT_DIR\"" >> $SETUP_FILE
+echo "echo -e \"\${YELLOW}↻ Creating project directory: \$PROJECT_DIR...\"" >> $SETUP_FILE
+echo "mkdir -p \$PROJECT_DIR || error_exit \"Failed to create project directory: $PROJECT_DIR\" && success_msg \"Project directory created: $PROJECT_DIR\"" >> $SETUP_FILE
+
 
 # Create a virtual environment inside the project directory
 echo "echo -e \"\${YELLOW}↻ Creating virtual environment: $VENV_DIR...\"" >> $SETUP_FILE
