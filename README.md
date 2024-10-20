@@ -19,14 +19,22 @@ This is a Python project that provides a foundational structure for application 
    git clone https://github.com/ROMAsofthub/Python-Project-Generator.git
    cd Python-Project-Gnerator
 
-2. **Edit the PPG.sh file**: Edit the file with your preferred text editor:
+2. **Edit the `PPG.sh` file**: Edit the file with your preferred text editor:
    ```bash
    sudo nano PPG.sh
+
+3. **Switch to Super User**: Enter as a super user to ensure you have the necessary permissions:
+   ```bash
+   su
+
+4. **Set Permissions**: Grant execute permissions to the `PPG.sh` file:
+   ```bash
+   chmod +x PPG.sh
    
-3. **Execute the PPG.sh file**: Run the generator to create an installation file:
+5. **Execute the `PPG.sh` file**: Run the generator to create an installation file:
    ```bash
    ./PPG.sh
    
-4. **Execute the setup.sh file**: After executing it, you should see some installation processes:
+6. **Execute the `setup.sh` file**: After executing it, you should see some installation processes:
    ```bash
    ./setup.sh
