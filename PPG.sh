@@ -24,12 +24,13 @@ echo "clear" >> $SETUP_FILE
 echo "" >> $SETUP_FILE
 echo "SETUP_FILE=\"$SETUP_FILE\"" >> $SETUP_FILE
 
-# Definición de colores
+# Def colors
 echo "RED=\"\e[0;31m\"" >> $SETUP_FILE
 echo "GREEN=\"\e[0;32m\"" >> $SETUP_FILE
 echo "YELLOW=\"\e[0;33m\"" >> $SETUP_FILE
 echo "WHITE=\"\e[0;37m\"" >> $SETUP_FILE
 echo "RESET=\"\e[0;0m\"" >> $SETUP_FILE
+
 # Function to handle errors
 echo "error_exit() {" >> $SETUP_FILE
 echo "    echo -e \"\${RED}✘✘ Error: \$1\"; exit 1;" >> $SETUP_FILE
@@ -50,14 +51,13 @@ echo "fi" >> $SETUP_FILE
 echo "echo -e \"\${YELLOW}↻ Creating project directory: \$PROJECT_DIR...\"" >> $SETUP_FILE
 echo "mkdir -p \$PROJECT_DIR || error_exit \"Failed to create project directory: $PROJECT_DIR\" && success_msg \"Project directory created: $PROJECT_DIR\"" >> $SETUP_FILE
 
-
 # Create a virtual environment inside the project directory
 echo "echo -e \"\${YELLOW}↻ Creating virtual environment: $VENV_DIR...\"" >> $SETUP_FILE
 echo "python3 -m venv \$PROJECT_DIR/$VENV_DIR || error_exit \"Failed to create virtual environment: $VENV_DIR\" && success_msg \"Virtual environment created: $VENV_DIR\"" >> $SETUP_FILE
 
-# Activate the virtual environment
+# Activate the virtual environment temporarily
 echo "echo -e \"\${YELLOW}↻ Activating virtual environment...\"" >> $SETUP_FILE
-echo "source \$PROJECT_DIR/$VENV_DIR/bin/activate || error_exit \"Failed to activate virtual environment: $VENV_DIR\" && success_msg \"Virtual environment activated: $VENV_DIR\"" >> $SETUP_FILE
+echo "source \$PROJECT_DIR/$VENV_DIR/bin/activate || error_exit \"Failed to activate virtual environment temporarily: $VENV_DIR\" && success_msg \"Virtual environment activated temporarily: $VENV_DIR\"" >> $SETUP_FILE
 
 # Install modules
 for MODULE in "${MODULES[@]}"; do
@@ -80,8 +80,10 @@ done
 # Activate_venv file creation
 echo "echo -e \"\${YELLOW}↻ Creating file: activate_venv.sh...\${RED}\"" >> $SETUP_FILE
 echo "touch \$PROJECT_DIR/activate_venv.sh || error_exit \"Failed to create file: activate_venv.sh\" && success_msg \"File created: activate_venv.sh\"" >> $SETUP_FILE
+echo "echo \"#!/bin/bash\" > activate_venv.sh" >> $SETUP_FILE
+echo "echo \"SETUP_FILE=\\"\$SETUP_FILE\\"\" >> activate_venv.sh" >> $SETUP_FILE
 echo "chmod +x activate_venv.sh" >> $SETUP_FILE
-echo "echo \"echo -e \"\${YELLOW}↻ Activating virtual environment...\"\" >> activate_venv.sh" >> $SETUP_FILE
+echo "echo \"echo -e \\"↻ Activating virtual environment...\\"\" >> activate_venv.sh" >> $SETUP_FILE
 echo "echo \"source \$PROJECT_DIR/\$VENV_DIR/bin/activate || error_exit \"Failed to activate virtual environment: \$VENV_DIR\" && success_msg \"Virtual environment activated: \$VENV_DIR\"\" >> activate_venv.sh" >> $SETUP_FILE
 
 
