@@ -97,5 +97,5 @@ chmod +x $SETUP_FILE
 echo "$SETUP_FILE has been generated. Run it to install everything"
 
 # Python Project Generator
-# Ver: 1.0
+# Ver: 2
 # Rights reserved [ROMA]software
