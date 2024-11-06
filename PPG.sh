@@ -77,6 +77,14 @@ for FILE in "${FILES[@]}"; do
   echo "touch \$PROJECT_DIR/$FILE || error_exit \"Failed to create file: $FILE\" && success_msg \"File created: $FILE\"" >> $SETUP_FILE
 done
 
+# Activate_venv file creation
+echo "echo -e \"\${YELLOW}↻ Creating file: activate_venv.sh...\${RED}\"" >> $SETUP_FILE
+echo "touch \$PROJECT_DIR/activate_venv.sh || error_exit \"Failed to create file: activate_venv.sh\" && success_msg \"File created: activate_venv.sh\"" >> $SETUP_FILE
+echo "chmod +x activate_venv.sh" >> $SETUP_FILE
+echo "echo \"echo -e \"\${YELLOW}↻ Activating virtual environment...\"\" >> activate_venv.sh" >> $SETUP_FILE
+echo "echo \"source \$PROJECT_DIR/\$VENV_DIR/bin/activate || error_exit \"Failed to activate virtual environment: \$VENV_DIR\" && success_msg \"Virtual environment activated: \$VENV_DIR\"\" >> activate_venv.sh" >> $SETUP_FILE
+
+
 # Inform the user
 echo "echo -e \"\${GREEN}✓ Setup complete. Virtual environment, Modules, folders and files initialized in \$PROJECT_DIR.\${RESET}\"" >> $SETUP_FILE
 echo "rm \$SETUP_FILE" >> $SETUP_FILE
