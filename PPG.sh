@@ -80,16 +80,17 @@ done
 # Activate_venv file creation
 echo "echo -e \"\${YELLOW}↻ Creating file: activate_venv.sh...\${RED}\"" >> $SETUP_FILE
 echo "touch \$PROJECT_DIR/activate_venv.sh || error_exit \"Failed to create file: activate_venv.sh\" && success_msg \"File created: activate_venv.sh\"" >> $SETUP_FILE
-echo "echo \"#!/bin/bash\" > activate_venv.sh" >> $SETUP_FILE
-echo "echo \"SETUP_FILE=\\"\\$SETUP_FILE\\"\" >> activate_venv.sh" >> $SETUP_FILE
 echo "chmod +x activate_venv.sh" >> $SETUP_FILE
-echo "echo \"echo -e \\"↻ Activating virtual environment...\\"\" >> activate_venv.sh" >> $SETUP_FILE
-echo "echo \"source \$PROJECT_DIR/\$VENV_DIR/bin/activate || error_exit \"Failed to activate virtual environment: \$VENV_DIR\" && success_msg \"Virtual environment activated: \$VENV_DIR\"\" >> activate_venv.sh" >> $SETUP_FILE
-
+echo "cat<<EOF > activate_venv.sh"
+echo "#!/bin/bash\"" >> $SETUP_FILE
+echo "echo -e \"↻ Activating virtual environment...\"" >> $SETUP_FILE
+echo "source $PROJECT_DIR/$VENV_DIR/bin/activate" >> $SETUP_FILE
+echo "EOF" >> $SETUP_FILE
 
 # Inform the user
 echo "echo -e \"\${GREEN}✓ Setup complete. Virtual environment, Modules, folders and files initialized in \$PROJECT_DIR.\${RESET}\"" >> $SETUP_FILE
 echo "rm \$SETUP_FILE" >> $SETUP_FILE
+
 # Make the setup script executable
 chmod +x $SETUP_FILE
 
@@ -97,5 +98,5 @@ chmod +x $SETUP_FILE
 echo "$SETUP_FILE has been generated. Run it to install everything"
 
 # Python Project Generator
-# Ver: 2
-# Rights reserved [ROMA]software
+# Ver: 2.2
+# Rights not reserved. Please, if used, give credits to [ROMA]software
