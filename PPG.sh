@@ -86,6 +86,7 @@ echo "#!/bin/bash\"" >> $SETUP_FILE
 echo "echo -e \"↻ Activating virtual environment...\"" >> $SETUP_FILE
 echo "source $PROJECT_DIR/$VENV_DIR/bin/activate" >> $SETUP_FILE
 echo "EOF" >> $SETUP_FILE
+echo "chmod +x activate_venv.sh" >> $SETUP_FILE
 
 # Inform the user
 echo "echo -e \"\${GREEN}✓ Setup complete. Virtual environment, Modules, folders and files initialized in \$PROJECT_DIR.\${RESET}\"" >> $SETUP_FILE
