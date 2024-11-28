@@ -81,7 +81,7 @@ done
 echo "echo -e \"\${YELLOW}↻ Creating file: activate_venv.sh...\${RED}\"" >> $SETUP_FILE
 echo "touch \$PROJECT_DIR/activate_venv.sh || error_exit \"Failed to create file: activate_venv.sh\" && success_msg \"File created: activate_venv.sh\"" >> $SETUP_FILE
 echo "chmod +x activate_venv.sh" >> $SETUP_FILE
-echo "cat<<EOF > activate_venv.sh"
+echo "cat<<EOF > activate_venv.sh" >> $SETUP_FILE
 echo "#!/bin/bash\"" >> $SETUP_FILE
 echo "echo -e \"↻ Activating virtual environment...\"" >> $SETUP_FILE
 echo "source $PROJECT_DIR/$VENV_DIR/bin/activate" >> $SETUP_FILE
