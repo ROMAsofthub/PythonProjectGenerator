@@ -62,7 +62,7 @@ echo "source \$PROJECT_DIR/$VENV_DIR/bin/activate || error_exit \"Failed to acti
 # Install modules
 for MODULE in "${MODULES[@]}"; do
   echo "echo -e \"\${YELLOW}↻ Installing the module '$MODULE'...\${WHITE}\"" >> $SETUP_FILE
-  echo "pip install \"$MODULE\" || error_exit \"Failed to install module: $MODULE\" && success_msg \"Module installed: $MODULE\"" >> $SETUP_FILE
+  echo "pip3 install \"$MODULE\" || error_exit \"Failed to install module: $MODULE\" && success_msg \"Module installed: $MODULE\"" >> $SETUP_FILE
 done
 
 # Create folders inside the project directory
