@@ -23,7 +23,7 @@ This is a Bash project that provides a foundational structure for Python applica
 
 2. **Edit the `PPG.sh` file**: Edit the file config with your preferred text editor:
    ```bash
-   sudo nano PPG.sh
+   nano PPG.sh
 
 3. **Set Permissions**: Grant execute permissions to the `PPG.sh` file:
    ```bash
