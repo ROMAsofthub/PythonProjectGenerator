@@ -83,7 +83,7 @@ echo "touch \$PROJECT_DIR/activate_venv.sh || error_exit \"Failed to create file
 echo "cat<<EOF > ./$PROJECT_DIR/activate_venv.sh" >> $SETUP_FILE
 echo "#!/bin/bash" >> $SETUP_FILE
 echo "echo -e \"↻ Activating virtual environment...\"" >> $SETUP_FILE
-echo "source $VENV_DIR/bin/activate" >> $SETUP_FILE
+echo "source $PROJECT_DIR/$VENV_DIR/bin/activate" >> $SETUP_FILE
 echo "EOF" >> $SETUP_FILE
 echo "chmod +x ./$PROJECT_DIR/activate_venv.sh" >> $SETUP_FILE
 
